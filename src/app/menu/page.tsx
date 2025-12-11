@@ -2,8 +2,21 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { products, categories } from "@/lib/products";
+
+const productImages: Record<string, string> = {
+  "Classic Vanilla Bean": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop",
+  "Dark Chocolate Truffle": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&h=400&fit=crop",
+  "Strawberry Dream": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop",
+  "Autumn Spice": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=400&fit=crop",
+  "Salted Caramel": "https://images.unsplash.com/photo-1562440499-64c9a111f713?w=400&h=400&fit=crop",
+  "Lemon Lavender": "https://images.unsplash.com/photo-1519869325930-281384f7f2e4?w=400&h=400&fit=crop",
+  "Red Velvet Classic": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=400&h=400&fit=crop",
+  "Halloween Spooky Treat": "https://images.unsplash.com/photo-1509461399763-ae67a981b254?w=400&h=400&fit=crop",
+  "Custom Creation": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400&h=400&fit=crop",
+};
 
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -29,7 +42,15 @@ export default function MenuPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product, index) => (
               <motion.div key={product.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-[var(--background-card)] rounded-2xl overflow-hidden border border-[var(--border)] hover:border-[var(--accent)] transition-colors">
-                <div className="aspect-square bg-[var(--background-light)] flex items-center justify-center"><span className="text-7xl">🎂</span></div>
+                <div className="aspect-square bg-[var(--background-light)] relative overflow-hidden">
+                  <Image
+                    src={productImages[product.name] || "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop"}
+                    alt={`${product.name} - ${product.description}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-xl font-medium text-[var(--foreground)]">{product.name}</h3>

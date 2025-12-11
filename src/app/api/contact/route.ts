@@ -1,12 +1,24 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { name, email, message } = body;
 
-    // For now, log the submission
-    console.log("Contact form submission:", { name, email, message });
+    if (!name || !email || !message) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    // Save to database
+    await prisma.contactMessage.create({
+      data: {
+        name,
+        email,
+        message,
+        read: false,
+      },
+    });
 
     // TODO: Add email sending with Resend
     // const resend = new Resend(process.env.RESEND_API_KEY);

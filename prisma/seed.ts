@@ -65,7 +65,7 @@ async function main() {
   console.log("Created", products.length, "products");
 
   // Create admin user
-  const adminEmail = process.env.ADMIN_EMAIL || "perry.bailes@gmail.com";
+  const adminEmail = process.env.ADMIN_EMAIL || "{ADMIN_EMAIL}";
   const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
   const hashedPassword = await bcrypt.hash(adminPassword, 10);
 
@@ -74,7 +74,7 @@ async function main() {
     update: {},
     create: {
       email: adminEmail,
-      name: "Perry Bailes",
+      name: "{ADMIN_NAME}",
       passwordHash: hashedPassword,
       role: "ADMIN",
     },

@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Sweet Meadow Bakery",
               description: "Handcrafted artisan cakes and treats in Beverly, Massachusetts",
               url: "https://sweetmeadow-bakery.com",
-              telephone: "(478) 299-1604",
+              telephone: "{BUSINESS_PHONE}",
               email: "sweetmeadowbakery@gmail.com",
               address: {
                 "@type": "PostalAddress",

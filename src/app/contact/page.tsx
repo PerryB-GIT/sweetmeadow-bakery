@@ -34,7 +34,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl text-[var(--accent-light)] mb-6" style={{ fontFamily: "var(--font-dancing-script), cursive" }}>Get in Touch</h2>
                 <div className="space-y-4">
                   <div><p className="text-[var(--foreground-muted)] text-sm">Location</p><p className="text-[var(--foreground)]">Beverly, MA</p></div>
-                  <div><p className="text-[var(--foreground-muted)] text-sm">Phone</p><a href="tel:4782991604" className="text-[var(--accent-light)] hover:text-[var(--accent-hover)]">(478) 299-1604</a></div>
+                  <div><p className="text-[var(--foreground-muted)] text-sm">Phone</p><a href="tel:{BUSINESS_PHONE}" className="text-[var(--accent-light)] hover:text-[var(--accent-hover)]">{BUSINESS_PHONE}</a></div>
                   <div><p className="text-[var(--foreground-muted)] text-sm">Email</p><a href="mailto:sweetmeadowbakery@gmail.com" className="text-[var(--accent-light)] hover:text-[var(--accent-hover)]">sweetmeadowbakery@gmail.com</a></div>
                   <div><p className="text-[var(--foreground-muted)] text-sm">Hours</p><p className="text-[var(--foreground)]">Daily 9am - 5pm</p></div>
                 </div>

@@ -82,7 +82,7 @@ export default function Home() {
             <p className="text-lg text-[var(--foreground-muted)] mb-8">Custom orders welcome for birthdays, weddings, holidays, and special celebrations</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/order" className="btn btn-primary text-lg px-8 py-4">Place an Order</Link>
-              <a href="tel:4782991604" className="btn btn-secondary text-lg px-8 py-4">Call Us: (478) 299-1604</a>
+              <a href="tel:{BUSINESS_PHONE}" className="btn btn-secondary text-lg px-8 py-4">Call Us: {BUSINESS_PHONE}</a>
             </div>
           </motion.div>
         </div>

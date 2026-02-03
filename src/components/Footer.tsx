@@ -57,8 +57,8 @@ export default function Footer() {
             <ul className="space-y-2 text-[var(--foreground-muted)]">
               <li>Beverly, MA</li>
               <li>
-                <a href="tel:4782991604" className="hover:text-[var(--accent-light)]">
-                  (478) 299-1604
+                <a href="tel:{BUSINESS_PHONE}" className="hover:text-[var(--accent-light)]">
+                  {BUSINESS_PHONE}
                 </a>
               </li>
               <li>

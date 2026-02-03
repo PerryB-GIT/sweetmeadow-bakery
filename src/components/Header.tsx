@@ -40,7 +40,7 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:4782991604" className="text-[var(--accent-light)] hover:text-[var(--accent-hover)] transition-colors">(478) 299-1604</a>
+            <a href="tel:{BUSINESS_PHONE}" className="text-[var(--accent-light)] hover:text-[var(--accent-hover)] transition-colors">{BUSINESS_PHONE}</a>
             {status === "loading" ? (
               <span className="text-[var(--foreground-muted)] text-sm">...</span>
             ) : session ? (
@@ -87,7 +87,7 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
-                <a href="tel:4782991604" className="block py-2 text-[var(--accent-light)]">(478) 299-1604</a>
+                <a href="tel:{BUSINESS_PHONE}" className="block py-2 text-[var(--accent-light)]">{BUSINESS_PHONE}</a>
                 <div className="pt-4 border-t border-[var(--border)]">
                   {session ? (
                     <>

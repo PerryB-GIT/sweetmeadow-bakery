@@ -57,7 +57,7 @@ export async function POST(
       <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
         <div style="text-align: center; margin-bottom: 30px;">
           <h1 style="color: #8B4513; font-family: Georgia, serif; margin: 0;">Sweet Meadow Bakery</h1>
-          <p style="color: #666; margin: 5px 0;">Beverly, MA | (478) 299-1604</p>
+          <p style="color: #666; margin: 5px 0;">Beverly, MA | {BUSINESS_PHONE}</p>
         </div>
 
         <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px;">

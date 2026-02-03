@@ -174,7 +174,7 @@ export default function InvoiceDetailPage() {
                 Sweet Meadow Bakery
               </h2>
               <p className="text-gray-600 mt-1">Beverly, MA</p>
-              <p className="text-gray-600">(478) 299-1604</p>
+              <p className="text-gray-600">{BUSINESS_PHONE}</p>
               <p className="text-gray-600">sweetmeadowbakery@gmail.com</p>
             </div>
             <div className="text-right">
